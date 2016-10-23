@@ -8,13 +8,6 @@ import TimescaleCard from './components/TimescaleCard';
 import NextStepsCard from './components/NextStepsCard';
 import './App.css';
 
-const styles = {
-  container: {
-    textAlign: 'center',
-    paddingTop: 100,
-  },
-};
-
 const muiTheme = getMuiTheme({
   palette: {
     accent1Color: deepOrange500,
