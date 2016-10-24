@@ -1,24 +1,24 @@
 import React from 'react';
-import DreamlineTable from './DreamlineTable';
+import DreamlineCard from './DreamlineCard';
 
 export default class NextStepsCard extends React.Component {
   render() {
     return (
       <div className='row'> 
         <div className='col-md-4'>
-          <DreamlineTable
+          <DreamlineCard
             title='Steps Now'
             exampleLine='Find a showroom, schedule a test drive'
           />
         </div>
         <div className='col-md-4'>
-          <DreamlineTable
+          <DreamlineCard
             title='Tomorrow'
             exampleLine='Take a test drive'
           />
         </div>
         <div className='col-md-4'>
-          <DreamlineTable
+          <DreamlineCard
             title='Day After'
             exampleLine='Decide on desired details & extras'
           />

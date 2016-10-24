@@ -2,7 +2,7 @@ import React from 'react';
 import {Card, CardTitle, CardText} from 'material-ui/Card';
 import TextField from 'material-ui/TextField';
 
-export default class DreamlineTable extends React.Component {
+export default class DreamlineCard extends React.Component {
 
   constructor(props) {
     super(props);
@@ -22,30 +22,35 @@ export default class DreamlineTable extends React.Component {
                   hintText={this.props.exampleLine}
                   fullWidth={true}
                   name='first'
+                  multiLine={true}
                 />
               </li>
               <li>
                 <TextField
                   fullWidth={true}
                   name='second'
+                  multiLine={true}
                 />
               </li>
               <li>
                 <TextField
                   fullWidth={true}
                   name='third'
+                  multiLine={true}
                 />
               </li>
               <li>
                 <TextField
                   fullWidth={true}
                   name='fourth'
+                  multiLine={true}
                 />
               </li>
               <li>
                 <TextField
                   fullWidth={true}
                   name='fifth'
+                  multiLine={true}
                 />
               </li>
             </ol>

@@ -3,7 +3,7 @@ import {deepOrange500} from 'material-ui/styles/colors';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import NavigationBar from './components/NavigationBar';
-import DreamlineTable from './components/DreamlineTable';
+import DreamlineCard from './components/DreamlineCard';
 import TimescaleCard from './components/TimescaleCard';
 import NextStepsCard from './components/NextStepsCard';
 import './App.css';
@@ -54,13 +54,13 @@ class App extends Component {
             <div className='steps col-md-12'>
               <div className='row'>
                 <div className='col-md-4'>
-                  <DreamlineTable
+                  <DreamlineCard
                     title='Having'
                     exampleLine='Audi R8'
                   />
                 </div>
                 <div className='col-md-4'>
-                  <DreamlineTable
+                  <DreamlineCard
                     title='Cost'
                     exampleLine='$2,003/month'
                   />
@@ -68,19 +68,19 @@ class App extends Component {
               </div>
               <div className='row'>
                 <div className='col-md-4'>
-                  <DreamlineTable
+                  <DreamlineCard
                     title='Being'
                     exampleLine='Able to play a Jazz piano piece'
                   />
                 </div>
                 <div className='col-md-4'>
-                  <DreamlineTable
+                  <DreamlineCard
                     title='Doing'
                     exampleLine='Practice 1 hour a week through an online course'
                   />
                 </div>
                 <div className='col-md-4'>
-                  <DreamlineTable
+                  <DreamlineCard
                     title='Cost'
                     exampleLine='$0'
                   />
@@ -88,13 +88,13 @@ class App extends Component {
               </div>
               <div className='row'>
                 <div className='col-md-4'>
-                  <DreamlineTable
+                  <DreamlineCard
                     title='Doing'
                     exampleLine='Autocross in my WRX'
                   />
                 </div>
                 <div className='col-md-4'>
-                  <DreamlineTable
+                  <DreamlineCard
                     title='Cost'
                     exampleLine='$500'
                   />
