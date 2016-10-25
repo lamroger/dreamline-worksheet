@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import injectTapEventPlugin from 'react-tap-event-plugin';
-import App from './App';
+import { browserHistory } from 'react-router';
+
+import Routes from './config/routes';
 import './index.css';
 
 // Needed for onTouchTap
@@ -9,6 +11,6 @@ import './index.css';
 injectTapEventPlugin();
 
 ReactDOM.render(
-  <App />,
+  <Routes history={browserHistory} />,
   document.getElementById('root')
 );
