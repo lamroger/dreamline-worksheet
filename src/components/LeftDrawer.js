@@ -1,6 +1,7 @@
 import React from 'react';
 import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
+import { Link } from 'react-router';
 
 class LeftDrawer extends React.Component {
   render() {
@@ -12,7 +13,18 @@ class LeftDrawer extends React.Component {
           docked={false}
           width={200}
         >
-          <MenuItem onTouchTap={this.props.onToggleDrawer}>About</MenuItem>
+          <MenuItem 
+            onTouchTap={this.props.onToggleDrawer}
+            linkButton
+            containerElement={<Link to="/" />}
+            primaryText='Home'
+          />
+          <MenuItem 
+            onTouchTap={this.props.onToggleDrawer}
+            linkButton
+            containerElement={<Link to="/about" />}
+            primaryText='About'
+          />
         </Drawer>
       </div>
     );

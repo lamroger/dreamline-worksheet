@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import MainContainer from '../MainContainer';
 
 import './style.css';
 
@@ -9,11 +10,11 @@ export default class About extends Component {
 
   render() {
     return (
-      <div className='about'>
+      <MainContainer>
         <h1>
           About
         </h1>
-      </div>
+      </MainContainer>
     );
   }
 }

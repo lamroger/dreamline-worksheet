@@ -32,7 +32,7 @@ export default class App extends Component {
   render() {
     return (
       <MainContainer>
-        <div className='container-fluid text-center'>
+        <div className='text-center'>
           <div className='row'>
             <div className='col-md-12'>
               <TimescaleCard/> 
