@@ -17,4 +17,3 @@ it('renders seven <DreamlineCard/> component', () => {
   const wrapper = shallow(<App />);
   expect(wrapper.find(DreamlineCard)).to.have.length(7);
 });
-
