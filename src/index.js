@@ -1,7 +1,9 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render }from 'react-dom';
+import { createStore } from 'redux'
+import reducer from './reducers'
+
 import injectTapEventPlugin from 'react-tap-event-plugin';
-import { browserHistory } from 'react-router';
 
 import Routes from './config/routes';
 import './index.css';
@@ -10,7 +12,9 @@ import './index.css';
 // http://stackoverflow.com/a/34015469/988941
 injectTapEventPlugin();
 
-ReactDOM.render(
-  <Routes history={browserHistory} />,
+const store = createStore(reducer)
+
+render(
+  <Routes store={store}/>,
   document.getElementById('root')
 );
