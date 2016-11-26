@@ -1,34 +1,32 @@
-import React from 'react';
+import React, { Component, PropTypes } from 'react';
 import {Card, CardTitle} from 'material-ui/Card';
 import DropDownMenu from 'material-ui/DropDownMenu';
 import MenuItem from 'material-ui/MenuItem';
 
-function TitleCard(props) {
-  return (
-    <div className='top-bottom-buffer'> 
-      <Card>
-        <CardTitle title={props.children} />
-      </Card>
-    </div>
-  );
-}
+const TitleCard = (props) => (
+  <div className='top-bottom-buffer'> 
+    <Card>
+      <CardTitle title={props.children} />
+    </Card>
+  </div>
+)
 
-export default class TimescaleCard extends React.Component {
-
-  constructor(props) {
-    super(props);
-    this.state = {
-      value: 6,
-    };
-    
-    this.handleChange = this.handleChange.bind(this);
+export default class TimescaleCard extends Component {
+  static propTypes = {
+    value: PropTypes.string,
+    onChangeDropdown: PropTypes.func.isRequired
   }
+  // = ({ value = '6', onChangeDropdown }) => (
 
-  handleChange(event, index, value) {
-    this.setState({value});
+  componentWillReceiveProps(nextProps) {
+    console.log('received props', nextProps)
+    if (nextProps.value !== this.props.value) {
+      console.log('received props', nextProps)
+    }
   }
 
   render() {
+    const { value = '6', onChangeDropdown } = this.props
     return (
       <TitleCard>
         In 
@@ -37,14 +35,14 @@ export default class TimescaleCard extends React.Component {
           style={{
             fontSize: 24,
           }} 
-          value={this.state.value} 
-          onChange={this.handleChange}
+          value={value} 
+          onChange={onChangeDropdown}
         >
-          <MenuItem value={6} primaryText="6" />
-          <MenuItem value={12} primaryText="12" />
+          <MenuItem value={'6'} primaryText="6" />
+          <MenuItem value={'12'} primaryText="12" />
         </DropDownMenu> 
         months I dream of: 
       </TitleCard>
-    );
+    )
   }
 }

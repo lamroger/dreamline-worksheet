@@ -5,12 +5,12 @@ import {expect} from 'chai';
 import App from './index';
 import MainContainer from '../MainContainer'
 import DreamlineCard from '../DreamlineCard';
-import TimescaleCard from '../TimescaleCard';
+import Timeframe from '../../containers/Timeframe';
 import NextStepsCard from '../NextStepsCard';
 
-it('renders one <TimescaleCard/> component', () => {
+it('renders one <Timeframe/> component', () => {
   const wrapper = shallow(<App />);
-  expect(wrapper.find(TimescaleCard)).to.have.length(1);
+  expect(wrapper.find(Timeframe)).to.have.length(1);
 });
 
 it('renders seven <DreamlineCard/> component', () => {

@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux'
-import timespan from './timespan'
+import timeframe from './timeframe'
 
 const dreamlineWorksheet = combineReducers({
-  timespan
+  timeframe
 })
 
 export default dreamlineWorksheet

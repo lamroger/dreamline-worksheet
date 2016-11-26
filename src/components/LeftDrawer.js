@@ -15,13 +15,11 @@ class LeftDrawer extends React.Component {
         >
           <MenuItem 
             onTouchTap={this.props.onToggleDrawer}
-            linkButton
             containerElement={<Link to="/" />}
             primaryText='Home'
           />
           <MenuItem 
             onTouchTap={this.props.onToggleDrawer}
-            linkButton
             containerElement={<Link to="/about" />}
             primaryText='About'
           />

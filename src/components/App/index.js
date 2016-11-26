@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import MainContainer from '../MainContainer'
 import DreamlineCard from '../DreamlineCard';
-import TimescaleCard from '../TimescaleCard';
+import Timeframe from '../../containers/Timeframe';
 import NextStepsCard from '../NextStepsCard';
 import './style.css';
 
@@ -35,7 +35,7 @@ export default class App extends Component {
         <div className='text-center'>
           <div className='row'>
             <div className='col-md-12'>
-              <TimescaleCard/> 
+              <Timeframe /> 
             </div>
           </div>
           <div className='steps col-md-12'>
