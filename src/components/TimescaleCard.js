@@ -17,13 +17,6 @@ export default class TimescaleCard extends Component {
     onChangeDropdown: PropTypes.func.isRequired
   }
 
-  componentWillReceiveProps(nextProps) {
-    console.log('received props', nextProps)
-    if (nextProps.value !== this.props.value) {
-      console.log('received props', nextProps)
-    }
-  }
-
   render() {
     const { value = '6', onChangeDropdown } = this.props
     return (
